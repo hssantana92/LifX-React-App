@@ -1,8 +1,6 @@
 import { Component } from "react";
 import Button from 'react-bootstrap/Button';
 
-var token = "Bearer c21a99f98f3d64bce53933d23097cbd4fb880ecf476037f82be4c85eb84ce344";
-
 class TogglePower extends Component{
     state = {
         lightInfo: this.props.data.lightInfo,
@@ -16,7 +14,7 @@ class TogglePower extends Component{
         fetch(urlPower, {
             method: 'POST',
             headers: {
-                'Authorization': token
+                'Authorization': this.props.data.token
             },
           })
             .then(response => response.json())
@@ -44,7 +42,7 @@ class TogglePower extends Component{
         fetch(urlState, {   
             method: 'PUT',
             headers: {
-                'Authorization': token,
+                'Authorization': this.props.data.token,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)

@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import FlashOnRoundedIcon from '@material-ui/icons/FlashOnRounded';
+import Typography from '@material-ui/core/Typography';
 
 
 const StyledGrid = withStyles((theme) => ({
@@ -54,11 +55,11 @@ class LightStatus extends Component {
             <div>
                 <StyledGrid container alignItems="center">
                     
-                    <text style={{padding: "10px", color: "black", textDecoration: "none"}}>{this.props.name}</text>
+                    <Typography style={{padding: "10px", color: "black", textDecoration: "none"}}>{this.props.name}</Typography>
                     <Divider style={{height: "auto"}}  orientation="vertical" flexItem />
                     <FlashOnRoundedIcon style={{color: (this.props.data.lightInfo[arrIndex]['power'] === "on") ? "green" : "#eb2a2a", fontSize: "30px"}}></FlashOnRoundedIcon>
                     <Divider style={{height: "auto"}}  orientation="vertical" flexItem />
-                    <i style={{fontSize: "25px", marginBottom: "15px", color: iconColor}} class={iconSelector}></i>
+                    <i style={{fontSize: "25px", marginBottom: "15px", color: iconColor}} className={iconSelector}></i>
                 </StyledGrid>
                 
             </div>

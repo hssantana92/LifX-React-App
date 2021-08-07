@@ -1,10 +1,8 @@
 import { Component } from "react";
-import Button from 'react-bootstrap/Button';
 import { withStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
 import Typography from '@material-ui/core/Typography';
 
-var token = "Bearer c21a99f98f3d64bce53933d23097cbd4fb880ecf476037f82be4c85eb84ce344";
 
 const StyledSlider = withStyles({
     root: {
@@ -48,7 +46,7 @@ class SetBrightness extends Component{
         fetch(urlState, {   
             method: 'PUT',
             headers: {
-                'Authorization': token,
+                'Authorization': this.props.data.token,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)

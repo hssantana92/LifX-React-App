@@ -8,13 +8,12 @@ import LightStatus from "../LightStatus/LightStatus";
 import SetBrightness from "../SetBrightness/SetBrightness";
 
 
-var token = "Bearer c21a99f98f3d64bce53933d23097cbd4fb880ecf476037f82be4c85eb84ce344";
-
 class ListLights extends Component{
     state = {
         lightInfo: "",
         lightLabels: [],
         power: "off1",
+        token: `Bearer ${this.props.apiKey}`,
     }
 
 
@@ -31,7 +30,7 @@ class ListLights extends Component{
         fetch(url, {
             method: 'GET',
             headers: {
-                'Authorization': token
+                'Authorization': this.state.token
             },
           })
             .then(response => response.json())
