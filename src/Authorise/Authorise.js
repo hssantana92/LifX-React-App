@@ -2,21 +2,33 @@ import {Component} from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import ListLights from '../ListLights/ListLights';
+import { instanceOf } from 'prop-types';
+import { withCookies, Cookies } from 'react-cookie';
 
 const url = "https://api.lifx.com/v1/lights/all";
 
+
 class Authorise extends Component{
+    static propTypes = {
+        cookies: instanceOf(Cookies).isRequired
+    };
+
     state = {
-        apiKey: "",
-        authorised: false,
-        display: "",
+        apiKey: this.props.cookies.get('apiKey') || "",
+        authorised: this.props.cookies.get('authorised') || false,
+        display: this.props.cookies.get('display') || "",
     }
+
 
     onInputChange(event){
         this.setState({
             apiKey: event.target.value
         })
+        this.props.cookies.set('apiKey', event.target.value, { 
+            path: '/' 
+        });
     }
+
 
     onKeySubmit(){
         // Attempt to call API
@@ -37,7 +49,13 @@ class Authorise extends Component{
                 this.setState({
                     authorised: true,
                     display: "none"
-                })
+                });
+                this.props.cookies.set('authorised', true, { 
+                    path: '/' 
+                });
+                this.props.cookies.set('display', "none", { 
+                    path: '/' 
+                });
             })
             .catch((error) => {
                 console.log(error)
@@ -51,6 +69,7 @@ class Authorise extends Component{
         if (isAuthorised){
             displayComponent = <ListLights apiKey={this.state.apiKey}></ListLights>
         };
+
         return (
             <div>
             <div style={{width:"300px", margin: "auto", display: this.state.display}}>
@@ -60,6 +79,7 @@ class Authorise extends Component{
                         <Form.Control type="text" placeholder="Enter API key" onChange={this.onInputChange.bind(this)} />
                         <Form.Text className="text-muted">
                             Please enter a valid LifX API key
+                            
                         </Form.Text>
                         <Button style={{marginTop: "10px"}} variant="primary" onClick={this.onKeySubmit.bind(this)}>
                             Submit
@@ -75,4 +95,4 @@ class Authorise extends Component{
 
 }
 
-export default Authorise;
+export default withCookies(Authorise);
