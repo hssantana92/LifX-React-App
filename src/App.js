@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>LifX Light Controller</h1>
+      <h1 style={{marginTop: "10px"}}>LifX Light Controller</h1>
       <CookiesProvider>
         <Authorise></Authorise>  
       </CookiesProvider>

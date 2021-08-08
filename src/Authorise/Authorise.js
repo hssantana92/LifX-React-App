@@ -26,7 +26,7 @@ class Authorise extends Component{
         })
         this.props.cookies.set('apiKey', event.target.value, { 
             path: '/',
-            magAge: 36000,
+            maxAge: 36000,
             secure: true
         });
     }
@@ -54,12 +54,12 @@ class Authorise extends Component{
                 });
                 this.props.cookies.set('authorised', true, { 
                     path: '/',
-                    magAge: 36000,
+                    maxAge: 36000,
                     secure: true
                 });
                 this.props.cookies.set('display', "none", { 
                     path: '/',
-                    magAge: 36000,
+                    maxAge: 36000,
                     secure: true
                 });
             })
