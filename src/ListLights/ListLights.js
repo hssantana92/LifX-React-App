@@ -12,7 +12,6 @@ class ListLights extends Component{
     state = {
         lightInfo: "",
         lightLabels: [],
-        power: "off1",
         token: `Bearer ${this.props.apiKey}`,
     }
 

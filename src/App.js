@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1><i style={{fontSize: "25px", marginBottom: "15px", color: "#ffdb59"}} className="lightbulb icon"></i>LifX Light Controller</h1>
+      <h1>LifX Light Controller</h1>
       <CookiesProvider>
         <Authorise></Authorise>  
       </CookiesProvider>
