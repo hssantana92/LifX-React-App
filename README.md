@@ -5,7 +5,16 @@ This web application was coded in JavaScript with React.js and the LifX HTTP API
 ### Getting Started
 
 A screen is displayed requesting an API Key which is created when setting up the LifX bulb
+![image](https://user-images.githubusercontent.com/86550766/215322033-6af5f01e-acfd-4c6c-86b0-09adcab9ea81.png)
 
+### Control Page
 
-### Controls
+Once a valid API Key is entered, the controller presents itself
+
+![image](https://user-images.githubusercontent.com/86550766/215321990-904943bc-f0f9-4607-8423-85bd443cb8b3.png)
+
+A light can then be clicked on and the following controls are displayed.
+
+![image](https://user-images.githubusercontent.com/86550766/215321898-91bc1a7b-b170-4be8-a2f9-3a1b7be550dc.png)
+
 
