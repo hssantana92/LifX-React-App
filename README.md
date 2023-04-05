@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+### A LifX Smart Light Web Application.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Click [here](https://www.google.com) for live demo
 
-## Available Scripts
+This web application was coded in JavaScript with React.js and the LifX HTTP API. This little project was one of my first personal projects and my second venture into the React library and was used to control one of my smart lights from anywhere in the world with the use of an API key. I have since started a much larger Smart Light Controller project using the LifX LAN protocol which can be found on my Github profile.
 
-In the project directory, you can run:
+### Getting Started
 
-### `yarn start`
+A screen is displayed requesting an API Key which is created when setting up the LifX bulb
+![image](https://user-images.githubusercontent.com/86550766/215322033-6af5f01e-acfd-4c6c-86b0-09adcab9ea81.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Control Page
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Once a valid API Key is entered, the controller presents itself
 
-### `yarn test`
+![image](https://user-images.githubusercontent.com/86550766/215321990-904943bc-f0f9-4607-8423-85bd443cb8b3.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A light can then be clicked on and the following controls are displayed.
 
-### `yarn build`
+![image](https://user-images.githubusercontent.com/86550766/215321898-91bc1a7b-b170-4be8-a2f9-3a1b7be550dc.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
